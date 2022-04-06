@@ -1,0 +1,303 @@
+@charset "UTF-8";
+.wrap1100 {
+  width: 100%;
+  max-width: 110rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#skip {
+  position: relative;
+  z-index: 9999;
+}
+
+#skip a {
+  position: absolute;
+  top: -200px;
+  left: 0;
+  width: 100%;
+  line-height: 30px;
+  border: 1px solid #dedede;
+  background-color: #333;
+}
+
+#skip a:focus, #skip a:active {
+  top: 0;
+}
+
+#header {
+  border-bottom: 1px solid #333;
+  width: 100%;
+  height: 12rem;
+  /* wrap1100 */
+}
+
+#header .wrap1100 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  /* h1 end */
+  /* hd-content end */
+}
+
+#header .wrap1100 h1 {
+  width: 10rem;
+  height: 12rem;
+}
+
+#header .wrap1100 h1 a {
+  display: block;
+  width: 100%;
+  height: 8.5rem;
+  background: url("../images/icon/bg_logo_m.png") no-repeat;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#header .wrap1100 .hd-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  /* hd-top end */
+  /* nav end */
+  /* hd-function end */
+}
+
+#header .wrap1100 .hd-content .hd-top {
+  height: 1.5rem;
+  margin: 1rem 0;
+}
+
+#header .wrap1100 .hd-content .hd-top p {
+  display: inline-block;
+  position: relative;
+  padding: 0 1.5rem;
+}
+
+#header .wrap1100 .hd-content .hd-top p::after {
+  content: '';
+  display: block;
+  width: 1px;
+  background: #c2c2c2;
+  height: 1.2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#header .wrap1100 .hd-content .hd-top p:first-child > a {
+  position: relative;
+}
+
+#header .wrap1100 .hd-content .hd-top p:first-child > a::before {
+  content: '';
+  display: block;
+  width: 2.5rem;
+  height: 1.8rem;
+  background: url("../images/icon/bg_nation.png") no-repeat;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -3rem;
+}
+
+#header .wrap1100 .hd-content .hd-top p:nth-child(3) {
+  padding-right: 4.5rem;
+}
+
+#header .wrap1100 .hd-content .hd-top p a {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #666666;
+  letter-spacing: -.1rem;
+}
+
+#header .wrap1100 .hd-content .hd-top p .zoom-in {
+  background: url("../images/icon/btn_fontsize.png") no-repeat;
+}
+
+#header .wrap1100 .hd-content .hd-top p .zoom-out {
+  background: url("../images/icon/btn_fontsize.png") no-repeat;
+  right: 1.3rem;
+  background-position: 50% 100%;
+}
+
+#header .wrap1100 .hd-content .hd-top p .zoom {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: .5rem;
+  background-size: cover;
+  position: absolute;
+}
+
+#header .wrap1100 .hd-content .hd-top #language {
+  display: inline-block;
+  position: relative;
+  width: 9rem;
+  margin-left: .5rem;
+  padding-right: 1rem;
+}
+
+#header .wrap1100 .hd-content .hd-top #language button {
+  z-index: 2;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#header .wrap1100 .hd-content .hd-top #language button::after {
+  content: '';
+  width: 1.2rem;
+  height: .8rem;
+  background: url("../images/icon/bg_lang.png") no-repeat;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -2rem;
+}
+
+#header .wrap1100 .hd-content .hd-top #language button.active {
+  color: #346d94;
+}
+
+#header .wrap1100 .hd-content .hd-top #language button.active::after {
+  background: url("../images/icon/bg_langon.png") no-repeat;
+}
+
+#header .wrap1100 .hd-content .hd-top #language ul {
+  display: none;
+  position: absolute;
+  width: 100%;
+  border: 1px solid #346d94;
+  padding-top: 2.2rem;
+  padding-left: .5rem;
+  top: -.5rem;
+  background: #fff;
+}
+
+#header .wrap1100 .hd-content .hd-top #language ul.active {
+  display: block;
+}
+
+#header .wrap1100 .hd-content .hd-top #language ul li {
+  padding: .3rem 0;
+}
+
+#header .wrap1100 .hd-content .hd-top #language ul li a {
+  font-weight: bold;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+}
+
+#header .wrap1100 .hd-content .hd-top #language ul li a:hover {
+  text-decoration: underline;
+}
+
+#header .wrap1100 .hd-content #nav {
+  width: 70rem;
+  height: 7.2rem;
+  margin-right: 11rem;
+  /* 보인는 nav : 1뎁스 */
+}
+
+#header .wrap1100 .hd-content #nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#header .wrap1100 .hd-content #nav > ul > li {
+  padding-top: 3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 7.2rem;
+  padding-bottom: 2.7rem;
+}
+
+#header .wrap1100 .hd-content #nav > ul > li > a {
+  font-size: 1.8rem;
+}
+
+#header .wrap1100 .hd-content #nav > ul > li:hover {
+  border-bottom: 4px solid #345d94;
+}
+
+#header .wrap1100 .hd-content #nav > ul > li:hover > a {
+  color: #345d94;
+}
+
+/* header end */
+/* 공통속성 */
+/* 2depth */
+div.slide-nav {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  left: 0;
+  top: 12.1rem;
+  border-bottom: 1px solid #c2c2c2;
+}
+
+div.slide-nav div.wrap1100 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5rem 0 3rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.slide-nav div.wrap1100 h2 {
+  font-size: 3rem;
+  width: 12rem;
+  height: 4.3rem;
+  position: relative;
+}
+
+div.slide-nav div.wrap1100 h2::after {
+  content: '';
+  position: absolute;
+  width: 6rem;
+  height: 2px;
+  background: #333;
+  bottom: 0;
+  left: 0;
+}
+
+div.slide-nav div.wrap1100 > ul {
+  background: red;
+  width: 88rem;
+}
+
+div.slide-nav div.wrap1100 > ul > li > a.title {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+div.slide-nav div.wrap1100 > ul > li > ul {
+  padding-top: 2rem;
+}
+/*# sourceMappingURL=style.css.map */

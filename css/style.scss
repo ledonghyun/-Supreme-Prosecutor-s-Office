@@ -1,0 +1,228 @@
+.wrap1100{width: 100%; max-width: 110rem; margin: 0 auto; display: flex;}
+
+$blue1: rgb(23,92,160);
+$blue2: rgba(13, 79, 114, .9);
+$blue3: #007ca5;
+$blue4: #3c70b7;
+$blue5: #346d94;
+$blue6: #115788;
+$blue7: #345d94;
+$blue8: #436ca9;
+
+$sliver1: #d9dde0;
+$sliver2: #666666;
+$sliver3: #ededed;
+$sliver4: #c2c2c2;
+
+$icon-img: "../images/icon/";
+$img: "../images/";
+
+@mixin top50-rel {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@mixin top50-abs {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#skip{position:relative;z-index:9999;} 
+#skip a{position: absolute; top: -200px; left:0; width: 100%; line-height: 30px; border: 1px solid #dedede; background-color: #333;} 
+#skip a:focus, #skip a:active{top: 0;}
+
+
+#header{
+    border-bottom: 1px solid #333;
+    width: 100%;
+    height: 12rem;
+    .wrap1100{
+        justify-content: space-between;
+        height: 100%;
+        h1{
+            width: 10rem;
+            height: 12rem;
+            a{  
+                display: block;
+                width: 100%;
+                height: 8.5rem;
+                background: url($icon-img+"bg_logo_m.png") no-repeat;
+                @include top50-rel();
+            }
+        }/* h1 end */
+        .hd-content{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: right;
+            align-items: stretch;
+            .hd-top{
+                height: 1.5rem;
+                margin: 1rem 0;
+                p{
+                    display: inline-block;
+                    position: relative;
+                    padding: 0 1.5rem;
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 1px;
+                        background: $sliver4;
+                        height: 1.2rem;
+                        position: absolute;                        
+                        right: 0;
+                        top: 0;
+                    }
+                    &:first-child>a{
+                        position: relative;
+                        &::before{
+                            content: '';
+                            display: block;
+                            width: 2.5rem;
+                            height: 1.8rem;
+                            background: url($icon-img+'bg_nation.png') no-repeat;
+                            @include top50-abs();
+                            left: -3rem;
+                        }
+                    }
+                    &:nth-child(3){
+                        padding-right: 4.5rem;
+                    }
+                    a{  
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        color: $sliver2;
+                        letter-spacing: -.1rem;
+                    }
+                    .zoom-in{background: url($icon-img+'btn_fontsize.png') no-repeat;}
+                    .zoom-out{background: url($icon-img+'btn_fontsize.png') no-repeat; right: 1.3rem; background-position: 50% 100%;}
+                    .zoom{display: inline-block; width: 1.2rem; height: 1.2rem; margin-left: .5rem; background-size: cover; position: absolute;}
+                }
+                #language{
+                    display: inline-block;
+                    position: relative;
+                    width: 9rem;
+                    margin-left: .5rem;
+                    padding-right: 1rem;
+                    button{
+                        z-index: 2;
+                        font-size: 1.2rem;
+                        background: none;
+                        border: none;
+                        position: relative;
+                        cursor: pointer;
+                        font-weight: bold;
+                        &::after{
+                            content: '';
+                            width: 1.2rem;
+                            height: .8rem;
+                            background: url($icon-img+'bg_lang.png') no-repeat;
+                            @include top50-abs();
+                            right: -2rem;
+                        }
+                        &.active{
+                            color: $blue5;
+                            &::after{
+                                background: url($icon-img+'bg_langon.png') no-repeat;
+                            }
+                        }
+                    }
+                    ul{
+                        display: none;
+                        position: absolute;
+                        width: 100%;
+                        border: 1px solid $blue5;
+                        padding-top: 2.2rem;
+                        padding-left: .5rem;
+                        top: -.5rem;
+                        background: #fff;
+                        &.active{
+                            display: block;
+                        }
+                        li{
+                            padding: .3rem 0;
+                            a{
+                                font-weight: bold;
+                                font-size: 1.2rem;
+                                background: none;
+                                border: none;
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }/* hd-top end */
+            #nav{
+                width: 70rem;
+                height: 7.2rem;
+                margin-right: 11rem;
+                >ul{
+                    display: flex;
+                    justify-content: space-between;
+                    >li{
+                        padding-top: 3rem;
+                        box-sizing: border-box;
+                        width: 7.2rem;
+                        padding-bottom: 2.7rem;
+                        >a{font-size: 1.8rem;}
+                        &:hover{
+                            border-bottom: 4px solid $blue7;
+                            >a{color: $blue7;}
+                        }
+                    }
+                }/* 보인는 nav : 1뎁스 */
+            }/* nav end */
+            .hd-function{
+
+            }/* hd-function end */
+        }/* hd-content end */
+    }/* wrap1100 */
+}/* header end */
+
+/* 공통속성 */
+a.shortcut{}
+
+/* 2depth */
+div.slide-nav{
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    top: 12.1rem;
+    border-bottom: 1px solid $sliver4;
+    div.wrap1100{
+        box-sizing: border-box;
+        padding: 5rem 0 3rem;
+        justify-content: space-between;
+        h2{
+            font-size: 3rem; 
+            width: 12rem;
+            height: 4.3rem;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 6rem;
+                height: 2px;
+                background: #333;
+                bottom: 0;
+                left: 0;
+            }
+        }
+        >ul{
+            background: red;
+            width: 88rem;
+            >li{
+                >a.title{font-size: 1.7rem; font-weight: bold;}
+                >ul{
+                    padding-top: 2rem;
+                    >li{
+                        >a{}
+                    }
+                }
+            }
+        }
+    }
+}
